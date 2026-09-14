@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0a3b3f">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- ============================================================
-     DEĞİŞTİRİLECEK YERLER:
-     1) İşletme adı .......... "Yıldız Yapı"
-     2) Telefon .............. 0555 000 00 00
-     3) tel: bağlantısı ...... tel:+905550000000
-     4) WhatsApp ............. wa.me/905550000000  (başında 90, boşluksuz)
-     5) Bölgeler ............. İzmit, Derince, Körfez...
-     6) Fotoğraflar .......... "İşlerimiz" bölümündeki kutular
+     DEĞİŞTİRİLECEK YERLER (sayfada geçtiği her yeri güncelle):
+     1) İşletme adı .......... "SARL DURUK"
+     2) Telefon .............. 06 47 37 53 08  (tel: +33647375308)
+     3) WhatsApp numarası .... wa.me/33647375308  (başında 33, boşluksuz)
+     4) TikTok ............... https://www.tiktok.com/@sarl.duruk
+     5) Bölgeler ............. Dijon, Chenôve, Talant, Quetigny...
+     6) Fotoğraflar .......... "Nos réalisations" bölümündeki kutular
      ============================================================ -->
 
-<title>Yıldız Yapı — Fayans, Seramik ve Kalebodur Döşeme | Kocaeli</title>
-<meta name="description" content="Kocaeli ve çevresinde banyo, mutfak ve zemin fayans-seramik uygulaması. Söküm, su yalıtımı, derz ve silikon yenileme. Keşif ücretsiz.">
-<meta property="og:title" content="Yıldız Yapı — Fayans ve Seramik Uygulama">
-<meta property="og:description" content="Banyo, mutfak ve zemin kaplama. Keşif ve fiyat teklifi ücretsiz.">
+<title>SARL DURUK — La qualité, c’est notre métier | Carrelage à Dijon</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<meta name="description" content="Pose de carrelage et de faïence pour salles de bains, cuisines et sols à Dijon et ses environs. Dépose, étanchéité, rejointoiement et silicone. Visite technique gratuite.">
+<meta property="og:title" content="SARL DURUK — La qualité, c’est notre métier">
+<meta property="og:description" content="Revêtement de salle de bains, cuisine et sol. Visite technique et devis gratuits.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,245 +26,212 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* ============================================================
-   ÖNCE TELEFON. Geniş ekran kuralları en altta @media ile.
-   ============================================================ */
 :root{
-  --derz:#d9d6ce;
+  --derz:#d9d6ce;        /* derz / zemin */
   --derz-koyu:#c4c0b6;
-  --fayans:#fcfcfb;
-  --sir:#0d5257;
+  --fayans:#fcfcfb;      /* karo yüzeyi */
+  --sir:#0d5257;         /* sırlı mavi-yeşil */
   --sir-koyu:#0a3b3f;
-  --kehribar:#c8820f;
+  --kehribar:#c8820f;    /* tek vurgu rengi, sadece arama butonunda */
   --murekkep:#14181a;
   --soluk:#5d6366;
-  --bosluk:6px;
-  --cubuk:64px;           /* alttaki arama çubuğu yüksekliği */
+  --bosluk:8px;          /* derz kalınlığı */
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth}
 body{
   font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   color:var(--murekkep);
-  font-size:16px;line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-  padding-bottom:calc(var(--cubuk) + env(safe-area-inset-bottom));
+  line-height:1.55; -webkit-font-smoothing:antialiased;
+  padding-bottom:64px; /* mobil arama çubuğu için */
+  /* zemin: derz çizgileriyle örülmüş büyük karo yüzeyi */
   background-color:var(--derz);
   background-image:
-    linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,0) 340px),
-    repeating-linear-gradient(90deg,rgba(20,24,26,.07) 0 1px,transparent 1px 76px),
-    repeating-linear-gradient(0deg,rgba(20,24,26,.07) 0 1px,transparent 1px 76px);
+    linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0) 420px),
+    repeating-linear-gradient(90deg,rgba(20,24,26,.07) 0 1px,transparent 1px 104px),
+    repeating-linear-gradient(0deg,rgba(20,24,26,.07) 0 1px,transparent 1px 104px);
+  background-position:center top;
 }
 img{max-width:100%;display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--sir);outline-offset:2px}
+:focus-visible{outline:3px solid var(--sir);outline-offset:3px}
 
-.sarma{max-width:1120px;margin:0 auto;padding:0 14px}
-.bolum{padding:40px 0;scroll-margin-top:60px}
-h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:700}
-h2{font-size:1.55rem;margin-bottom:6px}
-.bolum-ust{margin-bottom:18px}
-.bolum-ust p{color:var(--soluk);font-size:.97rem;max-width:56ch}
-
-/* ---------- butonlar: parmakla basılacak kadar büyük ---------- */
-.dugme{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  min-height:54px;padding:14px 20px;
-  background:var(--sir);color:#fff;text-decoration:none;
-  font-weight:600;font-size:1.05rem;border:0;cursor:pointer;border-radius:2px;
-  -webkit-tap-highlight-color:transparent;
-}
-.dugme.ara{background:var(--kehribar);color:#1a1204}
-.dugme.bos{background:transparent;color:var(--sir);box-shadow:inset 0 0 0 2px var(--sir)}
+.sarma{max-width:1120px;margin:0 auto;padding:0 16px}
+.bolum{padding-block:64px}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:700}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);margin-bottom:8px}
+.bolum-ust{margin-bottom:28px;max-width:60ch}
+.bolum-ust p{color:var(--soluk);font-size:1.02rem}
 
 /* ---------- üst bar ---------- */
 header{
-  position:sticky;top:0;z-index:50;height:56px;
-  background:rgba(217,214,206,.95);backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:50;
+  background:rgba(217,214,206,.94);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--derz-koyu);
 }
-.bar{display:flex;align-items:center;height:56px;gap:12px}
-.marka{font-weight:800;font-size:1.05rem;letter-spacing:-.03em;text-decoration:none;line-height:1.1}
-.marka span{display:block;font-size:.62rem;font-weight:500;color:var(--soluk)}
-nav{display:none}
-.bar .dugme{margin-left:auto;min-height:38px;padding:8px 14px;font-size:.86rem;white-space:nowrap}
+.bar{display:flex;align-items:center;gap:20px;height:64px}
+.marka{display:flex;align-items:center;gap:11px;text-decoration:none}
+.marka .logo{height:40px;width:auto;flex:none}
+.marka-yazi{font-weight:800;font-size:1.18rem;letter-spacing:-.03em;line-height:1.15}
+.marka-yazi span{display:block;font-size:.66rem;font-weight:500;color:var(--soluk);letter-spacing:.04em}
+nav{margin-left:auto;display:flex;gap:22px}
+nav a{text-decoration:none;font-size:.94rem;font-weight:500;color:var(--soluk)}
+nav a:hover{color:var(--sir)}
+.bar .dugme{padding:9px 16px;font-size:.9rem}
 
-/* ---------- hero: başlık ve arama butonu ilk ekranda ---------- */
+.dugme{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--sir);color:#fff;text-decoration:none;
+  padding:14px 22px;font-weight:600;font-size:1rem;border:0;cursor:pointer;
+  border-radius:2px;transition:background .15s ease;
+}
+.dugme:hover{background:var(--sir-koyu)}
+.dugme.ara{background:var(--kehribar);color:#1a1204}
+.dugme.ara:hover{background:#a96c08;color:#fff}
+.dugme.bos{background:transparent;color:var(--sir);box-shadow:inset 0 0 0 2px var(--sir)}
+.dugme.bos:hover{background:var(--sir);color:#fff}
+
+/* ---------- hero ---------- */
 .hero-alan{
+  position:relative;overflow:hidden;
   background-color:var(--sir-koyu);
-  background-image:
-    radial-gradient(120% 80% at 80% 8%,rgba(46,160,166,.5),transparent 60%),
-    repeating-linear-gradient(90deg,rgba(255,255,255,.075) 0 1px,transparent 1px 52px),
-    repeating-linear-gradient(0deg,rgba(255,255,255,.075) 0 1px,transparent 1px 52px);
+  background-image:radial-gradient(130% 100% at 76% 12%,rgba(46,160,166,.5),transparent 58%);
   border-bottom:var(--bosluk) solid var(--derz-koyu);
   color:#eef3f2;
 }
-.hero{padding:28px 0 26px}
-.hero h1{font-size:1.95rem;font-weight:800;color:#fff}
-.hero p.giris{margin-top:12px;font-size:1.02rem;color:#bcd6d7;max-width:40ch}
-.eylem{display:grid;gap:8px;margin-top:20px}
-.hero .dugme.bos{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5)}
-.rozetler{display:flex;gap:var(--bosluk);margin-top:18px}
-.rozet{background:rgba(255,255,255,.1);padding:10px 8px;flex:1;min-width:0;text-align:center}
-.rozet b{display:block;font-size:1rem;font-weight:800;color:#fff;letter-spacing:-.02em}
-.rozet small{color:#a7c4c5;font-size:.72rem;line-height:1.25;display:block}
+/* is fotografi: cok yavas yakinlasip geri acilir */
+.hero-alan::before{
+  content:"";position:absolute;inset:0;
+  background:url(fotograflar/hero-pose.jpg) center/cover no-repeat;
+  animation:yavas-yakinlas 28s ease-in-out infinite alternate;
+  will-change:transform;
+}
+/* koyu filtre + fayans derz cizgileri fotografin uzerinde kalir */
+.hero-alan::after{
+  content:"";position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 68px),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 1px,transparent 1px 68px),
+    linear-gradient(102deg,rgba(10,59,63,.92) 0 30%,rgba(10,59,63,.7) 70%,rgba(10,59,63,.52)),
+    linear-gradient(180deg,rgba(10,59,63,.18),rgba(10,59,63,.46));
+}
+.hero{position:relative;z-index:1;padding-block:108px 116px}
+.hero-ic{max-width:38rem}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);font-weight:800;max-width:16ch;color:#fff}
+.hero p.giris{margin-top:18px;font-size:1.12rem;color:#bcd6d7;max-width:46ch}
+.eylem{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.hero .dugme.bos{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+.hero .dugme.bos:hover{background:#fff;color:var(--sir-koyu)}
+.rozetler{display:flex;gap:var(--bosluk);margin-top:34px;flex-wrap:wrap}
+.rozet{background:rgba(255,255,255,.09);padding:14px 16px;flex:1;min-width:130px}
+.rozet b{display:block;font-size:1.32rem;font-weight:800;letter-spacing:-.02em;color:#fff}
+.rozet small{color:#a7c4c5;font-size:.84rem}
 
-/* karo şeridi: telefonda ince bant, geniş ekranda kare duvar */
-.duvar{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--bosluk);aspect-ratio:2/1;margin-top:20px}
-.karo{background:var(--fayans);position:relative;overflow:hidden}
-.karo::after{content:"";position:absolute;inset:0;background:linear-gradient(148deg,rgba(255,255,255,.9),rgba(13,82,87,.06) 62%,rgba(13,82,87,.14))}
-.karo.k1{background:#17787e}
-.karo.k2{background:#0f5c62}
-.karo.k3{background:#e7e3da}
-.karo.k4{background:#2ea0a6}
-.karo:nth-child(n+9){display:none}   /* telefonda son karolar gizli */
-@keyframes dose{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.duvar .karo{animation:dose .45s both}
-.duvar .karo:nth-child(1){animation-delay:.02s}
-.duvar .karo:nth-child(2){animation-delay:.07s}
-.duvar .karo:nth-child(3){animation-delay:.12s}
-.duvar .karo:nth-child(4){animation-delay:.17s}
-.duvar .karo:nth-child(5){animation-delay:.22s}
-.duvar .karo:nth-child(6){animation-delay:.27s}
-.duvar .karo:nth-child(7){animation-delay:.32s}
-.duvar .karo:nth-child(8){animation-delay:.37s}
-.duvar .karo:nth-child(9){animation-delay:.42s}
+@keyframes yavas-yakinlas{from{transform:scale(1.02)}to{transform:scale(1.16)}}
 
-/* ---------- kartlar ---------- */
+/* ---------- hizmetler ---------- */
 .izgara{display:grid;gap:var(--bosluk)}
+.uc{grid-template-columns:repeat(3,1fr)}
+.iki{grid-template-columns:repeat(2,1fr)}
+.dort{grid-template-columns:repeat(4,1fr)}
+/* zemin desenli olduğu için beyaz karoların kenarı tanımlı olsun */
 .kart,.adim,.bilgi,form,details,.foto{box-shadow:0 0 0 1px rgba(20,24,26,.09)}
-.kart{background:var(--fayans);padding:18px 16px 20px}
-.kart h3{font-size:1.05rem;margin-bottom:5px}
-.kart p{color:var(--soluk);font-size:.93rem}
-.kart .cizgi{width:28px;height:4px;background:var(--sir);margin-bottom:12px}
+.kart{background:var(--fayans);padding:26px 24px 28px}
+.kart h3{font-size:1.12rem;margin-bottom:8px}
+.kart p{color:var(--soluk);font-size:.96rem}
+.kart .cizgi{width:34px;height:4px;background:var(--sir);margin-bottom:16px}
 
-.adim{background:var(--fayans);padding:16px;display:flex;gap:12px;align-items:flex-start}
-.adim .no{font-size:1.5rem;font-weight:800;color:var(--derz-koyu);line-height:1;min-width:26px}
-.adim h3{font-size:1rem;margin-bottom:3px}
-.adim p{font-size:.92rem;color:var(--soluk)}
+/* ---------- süreç ---------- */
+.adim{background:var(--fayans);padding:24px;display:flex;flex-direction:column;gap:10px}
+.adim .no{font-size:.82rem;font-weight:700;color:var(--sir);letter-spacing:.06em}
+.adim h3{font-size:1.05rem}
+.adim p{font-size:.94rem;color:var(--soluk)}
 
-/* ---------- işlerimiz: telefonda yandan kayan şerit ---------- */
-.galeri{
-  display:flex;gap:var(--bosluk);overflow-x:auto;
-  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
-  margin:0 -14px;padding:0 14px 4px;scrollbar-width:none;
-}
-.galeri::-webkit-scrollbar{display:none}
-.foto{
-  flex:0 0 76%;scroll-snap-align:start;aspect-ratio:4/3;background:#cfccc3;
-  display:flex;align-items:center;justify-content:center;
-  color:#7b7970;font-size:.85rem;text-align:center;padding:10px;overflow:hidden;
-}
-.foto img{width:100%;height:100%;object-fit:cover}
-.kaydir{margin-top:10px;font-size:.8rem;color:var(--soluk)}
+/* ---------- işlerimiz ---------- */
+.galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--bosluk)}
+.foto{aspect-ratio:4/3;position:relative;overflow:hidden;background:#c4c0b6}
+.foto img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.foto:hover img{transform:scale(1.045)}
+.foto .etiket{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 13px;
+  font-size:.9rem;font-weight:600;color:#fff;line-height:1.3;
+  background:linear-gradient(0deg,rgba(6,30,32,.92),rgba(6,30,32,.35) 55%,rgba(6,30,32,0))}
+.galeri-alt{margin-top:var(--bosluk);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.galeri-alt small{color:var(--soluk);font-size:.86rem}
+.dugme.tiktok{background:#14181a;color:#fff}
+.dugme.tiktok:hover{background:#000}
 
 /* ---------- şerit ---------- */
-.serit{background:var(--sir);color:#fff;padding:32px 0}
-.serit h2{color:#fff}
-.serit p{color:#bcd6d8;margin:6px 0 18px;font-size:.97rem}
+.serit{background:var(--sir);color:#fff;padding:44px 0}
+.serit-ic{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.serit h2{color:#fff;max-width:22ch}
+.serit p{color:#bcd6d8;margin-top:6px}
 .serit .dugme{background:#fff;color:var(--sir)}
+.serit .dugme:hover{background:#e7e3da}
 
 /* ---------- sss ---------- */
-details{background:var(--fayans);margin-bottom:var(--bosluk);padding:0 16px}
-summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:600;font-size:.98rem;
-  display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:50px}
+.sss{max-width:44rem}
+details{background:var(--fayans);margin-bottom:var(--bosluk);padding:0 22px}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.35rem;font-weight:400;color:var(--sir);line-height:1}
+summary::after{content:"+";font-size:1.4rem;font-weight:400;color:var(--sir);line-height:1}
 details[open] summary::after{content:"–"}
-details p{padding:0 0 16px;color:var(--soluk);font-size:.93rem}
+details p{padding:0 0 20px;color:var(--soluk);max-width:62ch}
 
 /* ---------- iletişim ---------- */
-.iletisim{display:grid;gap:var(--bosluk)}
-.bilgi{background:var(--fayans);padding:20px 16px}
-.bilgi dt{font-size:.78rem;color:var(--soluk);margin-top:14px}
-.bilgi dd{font-weight:600;font-size:1.05rem}
+.iletisim{display:grid;grid-template-columns:1fr 1fr;gap:var(--bosluk)}
+.bilgi{background:var(--fayans);padding:30px 26px}
+.bilgi dl{margin-top:18px}
+.bilgi dt{font-size:.82rem;color:var(--soluk);margin-top:16px}
+.bilgi dd{font-weight:600;font-size:1.04rem}
 .bilgi dd a{text-decoration:none;color:var(--sir)}
-form{background:var(--fayans);padding:20px 16px}
-label{display:block;font-size:.83rem;color:var(--soluk);margin:12px 0 5px}
-input,textarea{
-  width:100%;font:inherit;font-size:16px;   /* 16px altı olursa iPhone sayfayı yakınlaştırır */
-  padding:13px;border:1px solid var(--derz-koyu);background:#fff;border-radius:2px;
-}
-textarea{min-height:88px;resize:vertical}
-form .dugme{width:100%;margin-top:18px}
-form small{display:block;margin-top:10px;color:var(--soluk);font-size:.78rem}
+form{background:var(--fayans);padding:30px 26px}
+label{display:block;font-size:.85rem;color:var(--soluk);margin:14px 0 5px}
+input,textarea{width:100%;font:inherit;font-size:.98rem;padding:11px 13px;border:1px solid var(--derz-koyu);background:#fff;border-radius:2px}
+textarea{min-height:92px;resize:vertical}
+form .dugme{width:100%;margin-top:20px}
+form small{display:block;margin-top:10px;color:var(--soluk);font-size:.8rem}
 
-footer{border-top:1px solid var(--derz-koyu);padding:20px 0 24px;font-size:.85rem;color:var(--soluk)}
-.footer-ic{display:grid;gap:4px}
+footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;color:var(--soluk)}
+.footer-ic{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+.footer-marka{display:flex;align-items:center;gap:10px}
+.footer-marka .logo{height:30px;width:auto;flex:none}
 
-/* ---------- ekrana sabit arama çubuğu ---------- */
-.mobil-cubuk{
-  position:fixed;bottom:0;left:0;right:0;z-index:60;display:flex;gap:1px;
-  background:var(--derz-koyu);padding-bottom:env(safe-area-inset-bottom);
-  box-shadow:0 -2px 12px rgba(0,0,0,.16);
-}
-.mobil-cubuk a{
-  flex:1;text-align:center;padding:0 8px;height:var(--cubuk);
-  display:flex;align-items:center;justify-content:center;gap:7px;
-  text-decoration:none;font-weight:700;font-size:1.02rem;background:var(--sir);color:#fff;
-}
+/* ---------- mobil arama çubuğu ---------- */
+.mobil-cubuk{position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;gap:1px;background:var(--derz-koyu)}
+.mobil-cubuk a{flex:1;text-align:center;padding:17px 8px;text-decoration:none;font-weight:600;background:var(--sir);color:#fff}
 .mobil-cubuk a.wa{background:#128c4a}
-.mobil-cubuk svg{width:19px;height:19px;fill:currentColor;flex:none}
+.mobil-cubuk a.tt{background:#14181a}
 
-/* ============================================================
-   TABLET
-   ============================================================ */
-@media(min-width:700px){
-  :root{--bosluk:8px}
-  .sarma{padding:0 20px}
-  .bolum{padding:56px 0}
-  h2{font-size:2rem}
-  .izgara.uc{grid-template-columns:repeat(2,1fr)}
-  .izgara.dort{grid-template-columns:repeat(2,1fr)}
-  .kart{padding:24px 22px 26px}
-  .iletisim{grid-template-columns:1fr 1fr}
-  .bilgi,form{padding:28px 24px}
-  .galeri{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;margin:0;padding:0}
-  .foto{flex:none}
-  .kaydir{display:none}
-  .serit .dugme{display:inline-flex}
-  .hero{padding:44px 0 40px}
-  .hero h1{font-size:2.6rem;max-width:16ch}
-  .hero p.giris{font-size:1.1rem}
-  .eylem{display:flex;flex-wrap:wrap}
-  .rozet{padding:13px 14px;text-align:left}
-  .rozet b{font-size:1.25rem}
-  .rozet small{font-size:.82rem}
-  .duvar{aspect-ratio:5/2}
+@media(max-width:900px){
+  .hero{padding-block:84px 92px}
+  /* tablette ust bar sikismasin: slogan gizlenir, menu kuculur, hicbir yazi kirilmaz */
+  .marka-yazi span{display:none}
+  .marka-yazi{font-size:1.06rem;white-space:nowrap}
+  .marka .logo{height:34px}
+  .bar{gap:14px}
+  nav{gap:15px}
+  nav a{font-size:.88rem;white-space:nowrap}
+  .bar .dugme{font-size:.85rem;padding:9px 13px;white-space:nowrap}
+  .uc,.dort{grid-template-columns:repeat(2,1fr)}
+  .iletisim{grid-template-columns:1fr}
 }
-
-/* ============================================================
-   MASAÜSTÜ
-   ============================================================ */
-@media(min-width:1000px){
-  body{padding-bottom:0}
-  .mobil-cubuk{display:none}
-  header,.bar{height:66px}
-  .marka{font-size:1.18rem}
-  .marka span{font-size:.66rem}
-  nav{display:flex;gap:22px;margin-left:auto}
-  nav a{text-decoration:none;font-size:.94rem;font-weight:500;color:var(--soluk)}
-  nav a:hover{color:var(--sir)}
-  .bar .dugme{margin-left:24px}
-  .bolum{padding:72px 0;scroll-margin-top:70px}
-  .hero{padding:64px 0 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
-  .hero h1{font-size:3.4rem}
-  .duvar{aspect-ratio:1/1;margin-top:0}
-  .karo:nth-child(n+9){display:block}
-  .karo.genis{grid-column:span 2}
-  .karo.uzun{grid-row:span 2}
-  .izgara.uc{grid-template-columns:repeat(3,1fr)}
-  .izgara.dort{grid-template-columns:repeat(4,1fr)}
-  .adim{flex-direction:column;gap:8px;padding:24px}
-  .serit{padding:44px 0}
-  .serit-ic{display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .serit p{margin-bottom:0}
-  .sss{max-width:44rem}
-  details{padding:0 22px}
-  .dugme:hover{filter:brightness(.92)}
+@media(max-width:820px){
+  .bar{height:auto;flex-wrap:wrap;padding-block:9px;gap:8px 14px}
+  .bar .dugme{margin-left:auto}
+  nav{order:3;width:100%;margin-left:0;justify-content:space-between;gap:10px;
+      border-top:1px solid var(--derz-koyu);padding-top:8px}
 }
-
+@media(max-width:640px){
+  .hero{padding-block:54px 58px}
+  nav{display:none}
+  .bar .dugme{margin-left:auto;font-size:.84rem;padding:9px 12px}
+  .marka .logo{height:34px}
+  .marka-yazi{font-size:1.05rem}
+  .bolum{padding-block:48px}
+  .uc,.dort,.iki,.galeri{grid-template-columns:1fr}
+  .galeri{grid-template-columns:repeat(2,1fr)}
+  .mobil-cubuk{display:flex}
+}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
@@ -275,140 +242,155 @@ footer{border-top:1px solid var(--derz-koyu);padding:20px 0 24px;font-size:.85re
 
 <header>
   <div class="sarma bar">
-    <a href="#" class="marka">Yıldız Yapı<span>fayans ve seramik uygulama</span></a>
+    <a href="#" class="marka">
+      <img class="logo" src="logo.png" alt="" width="455" height="298">
+      <span class="marka-yazi">SARL DURUK<span>la qualité, c’est notre métier</span></span>
+    </a>
     <nav>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#surec">Nasıl çalışıyoruz</a>
-      <a href="#isler">İşlerimiz</a>
-      <a href="#sss">Sık sorulanlar</a>
-      <a href="#iletisim">İletişim</a>
+      <a href="#hizmetler">Prestations</a>
+      <a href="#surec">Notre méthode</a>
+      <a href="#isler">Réalisations</a>
+      <a href="#sss">Questions fréquentes</a>
+      <a href="#iletisim">Contact</a>
     </nav>
-    <a href="tel:+905550000000" class="dugme ara">0555 000 00 00</a>
+    <a href="tel:+33647375308" class="dugme ara">06 47 37 53 08</a>
   </div>
 </header>
 
 <main>
   <section class="hero-alan">
-    <div class="sarma hero">
-      <div>
-        <h1>Fayans döşeriz; ölçüsü tutar, derzi düzgün kalır.</h1>
-        <p class="giris">Kocaeli ve çevresinde banyo, mutfak ve zemin kaplama. Söküm ve moloz çıkışı dahil, keşif ücretsiz.</p>
-        <div class="eylem">
-          <a href="tel:+905550000000" class="dugme ara">Hemen ara: 0555 000 00 00</a>
-          <a href="https://wa.me/905550000000?text=Merhaba%2C%20fayans%20i%C5%9Fi%20i%C3%A7in%20fiyat%20almak%20istiyorum." class="dugme bos" target="_blank" rel="noopener">WhatsApp’tan yaz</a>
-        </div>
-        <div class="rozetler">
-          <div class="rozet"><b>18 yıl</b><small>saha tecrübesi</small></div>
-          <div class="rozet"><b>Ücretsiz</b><small>yerinde keşif</small></div>
-          <div class="rozet"><b>2 yıl</b><small>işçilik garantisi</small></div>
-        </div>
+  <div class="sarma hero">
+    <div class="hero-ic">
+      <h1>La qualité, c’est notre métier.</h1>
+      <p class="giris">Carrelage, faïence et grès cérame à Dijon et ses environs&nbsp;: les mesures tombent juste, les joints restent nets. Dépose, étanchéité et évacuation des gravats comprises. Visite technique et devis gratuits.</p>
+      <div class="eylem">
+        <a href="tel:+33647375308" class="dugme ara">Appelez-nous</a>
+        <a href="https://wa.me/33647375308?text=Bonjour%2C%20je%20souhaite%20recevoir%20un%20devis%20pour%20des%20travaux%20de%20carrelage." class="dugme bos" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
       </div>
-      <div class="duvar" aria-hidden="true">
-        <div class="karo"></div>
-        <div class="karo k1"></div>
-        <div class="karo genis"></div>
-        <div class="karo k3"></div>
-        <div class="karo uzun k4"></div>
-        <div class="karo"></div>
-        <div class="karo k2"></div>
-        <div class="karo genis k3"></div>
-        <div class="karo"></div>
+      <div class="rozetler">
+        <div class="rozet"><b>18 ans</b><small>d’expérience sur chantier</small></div>
+        <div class="rozet"><b>Gratuite</b><small>visite technique sur place</small></div>
+        <div class="rozet"><b>2 ans</b><small>de garantie sur la main-d’œuvre</small></div>
       </div>
     </div>
+  </div>
   </section>
 
   <section id="hizmetler" class="sarma bolum">
     <div class="bolum-ust">
-      <h2>Yaptığımız işler</h2>
-      <p>Tek bir duş teknesi çevresinden komple daire zeminine kadar her ölçekte çalışıyoruz.</p>
+      <h2>Nos prestations</h2>
+      <p>Nous intervenons à toutes les échelles, du simple contour de receveur de douche au sol d’un appartement entier.</p>
     </div>
     <div class="izgara uc">
-      <article class="kart"><div class="cizgi"></div><h3>Banyo fayans ve seramik</h3><p>Duvardan zemine komple banyo kaplama. Eski fayansın sökümü ve molozun çıkarılması fiyata dahil.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Zemin kaplama, kalebodur</h3><p>Salon, koridor, balkon ve teras zemini. Kot farkı ve bozuk şap, döşemeden önce düzeltilir.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Mutfak tezgah arası</h3><p>Fayans, mozaik ve cam kesim. Priz, ocak ve davlumbaz boşlukları elmas uçla temiz kesilir.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Derz ve silikon yenileme</h3><p>Kararmış derzleri söker, küf tutmayan derz ve silikon çekeriz. Çoğu banyoda bir günde biter.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Su yalıtımı</h3><p>Fayans altına sürme izolasyon. Duş teknesi, sifon ve duvar-zemin birleşimi ayrıca yalıtılır.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Dış cephe ve merdiven</h3><p>Apartman girişi, merdiven basamağı ve bina önü kaplaması. Donmaya dayanıklı malzeme kullanılır.</p></article>
+      <article class="kart"><div class="cizgi"></div><h3>Carrelage et faïence de salle de bains</h3><p>Revêtement complet du mur au sol. La dépose de l’ancien carrelage et l’évacuation des gravats sont comprises dans le prix.</p></article>
+      <article class="kart"><div class="cizgi"></div><h3>Revêtement de sol, grès cérame</h3><p>Séjour, couloir, balcon et terrasse. Les différences de niveau et les chapes abîmées sont reprises avant la pose.</p></article>
+      <article class="kart"><div class="cizgi"></div><h3>Crédence de cuisine</h3><p>Faïence, mosaïque et verre découpés sur mesure. Les réservations pour prises, plaque et hotte sont coupées proprement au disque diamant.</p></article>
+      <article class="kart"><div class="cizgi"></div><h3>Rénovation des joints et du silicone</h3><p>Nous retirons les joints noircis et refaisons joints et silicone anti-moisissure. Dans la plupart des salles de bains, c’est terminé en une journée.</p></article>
+      <article class="kart"><div class="cizgi"></div><h3>Étanchéité</h3><p>Étanchéité liquide appliquée sous le carrelage. Le receveur, le siphon et la jonction mur-sol sont traités en plus.</p></article>
+      <article class="kart"><div class="cizgi"></div><h3>Façades et escaliers</h3><p>Entrée d’immeuble, marches d’escalier et abords du bâtiment. Nous utilisons des matériaux résistants au gel.</p></article>
     </div>
   </section>
 
   <section id="surec" class="sarma bolum">
     <div class="bolum-ust">
-      <h2>Nasıl çalışıyoruz</h2>
-      <p>İşe başlamadan önce fiyatı ve süreyi yazılı veririz.</p>
+      <h2>Notre méthode</h2>
+      <p>Avant de commencer, nous donnons le prix et le délai par écrit.</p>
     </div>
     <div class="izgara dort">
-      <div class="adim"><span class="no">1</span><div><h3>Yerinde ölçüm</h3><p>Metrekareyi ölçer, zeminin ve tesisatın durumuna bakarız. Keşif ücretsizdir.</p></div></div>
-      <div class="adim"><span class="no">2</span><div><h3>Yazılı fiyat</h3><p>Malzeme ve işçilik ayrı ayrı yazılır. İş bitince fiyat değişmez.</p></div></div>
-      <div class="adim"><span class="no">3</span><div><h3>Söküm ve döşeme</h3><p>Söküm, şap, yalıtım ve döşeme sırayla ilerler. Her akşam ortalık toplanır.</p></div></div>
-      <div class="adim"><span class="no">4</span><div><h3>Birlikte kontrol</h3><p>Derz ve silikon kuruduktan sonra işi beraber gezer, eksik varsa tamamlarız.</p></div></div>
+      <div class="adim"><span class="no">1. Visite</span><h3>Métré sur place</h3><p>Nous mesurons la surface et vérifions l’état du support et de la plomberie. La visite est gratuite.</p></div>
+      <div class="adim"><span class="no">2. Devis</span><h3>Prix écrit</h3><p>Matériaux et main-d’œuvre sont détaillés séparément. Le prix ne change pas en fin de chantier.</p></div>
+      <div class="adim"><span class="no">3. Chantier</span><h3>Dépose et pose</h3><p>Dépose, chape, étanchéité puis pose s’enchaînent dans l’ordre. Le chantier est rangé chaque soir.</p></div>
+      <div class="adim"><span class="no">4. Livraison</span><h3>Contrôle ensemble</h3><p>Une fois les joints et le silicone secs, nous parcourons le chantier avec vous et reprenons ce qui manque.</p></div>
     </div>
   </section>
 
   <section id="isler" class="sarma bolum">
     <div class="bolum-ust">
-      <h2>İşlerimiz</h2>
-      <p>Son dönemde tamamladığımız banyo, mutfak ve zemin uygulamaları.</p>
+      <h2>Nos réalisations</h2>
+      <p>Salles de bains, cuisines et sols réalisés récemment autour de Dijon. Retrouvez aussi nos chantiers en vidéo sur TikTok.</p>
     </div>
-    <!-- FOTOĞRAF EKLEME: kutunun içindeki yazıyı silip yerine
-         <img src="fotograflar/banyo-1.jpg" alt="Banyo fayans uygulaması"> yaz. -->
+    <!-- FOTOĞRAF DEĞİŞTİRME: fotograflar/ klasöründeki dosyaların üzerine kendi
+         fotoğraflarını aynı isimle kaydetmen yeterli (ör. fotograflar/salle-de-bains.jpg).
+         Şu anki görseller Pexels'ten alınmış serbest lisanslı geçici fotoğraflardır. -->
     <div class="galeri">
-      <div class="foto">Fotoğraf 1 — banyo</div>
-      <div class="foto">Fotoğraf 2 — mutfak tezgah arası</div>
-      <div class="foto">Fotoğraf 3 — salon zemini</div>
-      <div class="foto">Fotoğraf 4 — duş teknesi</div>
-      <div class="foto">Fotoğraf 5 — balkon</div>
-      <div class="foto">Fotoğraf 6 — merdiven</div>
+      <figure class="foto">
+        <img src="fotograflar/salle-de-bains.jpg" alt="Salle de bains entièrement carrelée, murs et sol" loading="lazy">
+        <figcaption class="etiket">Salle de bains complète — Dijon</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/credence-cuisine.jpg" alt="Pose d’une crédence en mosaïque dans une cuisine" loading="lazy">
+        <figcaption class="etiket">Crédence de cuisine — Chenôve</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/sol-gres-cerame.jpg" alt="Pose d’un sol en grès cérame sur chantier" loading="lazy">
+        <figcaption class="etiket">Sol en grès cérame — Talant</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/douche-etancheite.jpg" alt="Douche à l’italienne carrelée après étanchéité" loading="lazy">
+        <figcaption class="etiket">Douche et étanchéité — Quetigny</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/balcon-terrasse.jpg" alt="Terrasse et balcon carrelés en terre cuite" loading="lazy">
+        <figcaption class="etiket">Balcon et terrasse — Longvic</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/escalier.jpg" alt="Escalier et mur carrelés dans un immeuble" loading="lazy">
+        <figcaption class="etiket">Escalier d’immeuble — Beaune</figcaption>
+      </figure>
     </div>
-    <p class="kaydir">Diğer işler için yana kaydırın.</p>
+    <div class="galeri-alt">
+      <a class="dugme tiktok" href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">Voir nos chantiers sur TikTok</a>
+      <small>@sarl.duruk — nouvelles vidéos de chantier chaque semaine.</small>
+    </div>
   </section>
 
   <section class="serit">
     <div class="sarma serit-ic">
       <div>
-        <h2>Bu hafta keşfe gelebiliriz</h2>
-        <p>Fotoğrafını gönder, kabaca fiyatı telefonda söyleyelim.</p>
+        <h2>Nous pouvons passer faire la visite cette semaine</h2>
+        <p>Envoyez-nous une photo, nous vous donnons une première estimation par téléphone.</p>
       </div>
-      <a href="https://wa.me/905550000000?text=Merhaba%2C%20ke%C5%9Fif%20i%C3%A7in%20randevu%20almak%20istiyorum." class="dugme" target="_blank" rel="noopener">WhatsApp’tan fotoğraf gönder</a>
+      <a href="https://wa.me/33647375308?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20visite%20technique." class="dugme" target="_blank" rel="noopener">Envoyer une photo sur WhatsApp</a>
     </div>
   </section>
 
   <section id="sss" class="sarma bolum">
-    <div class="bolum-ust"><h2>Sık sorulanlar</h2></div>
+    <div class="bolum-ust"><h2>Questions fréquentes</h2></div>
     <div class="sss">
-      <details><summary>Malzemeyi siz mi alıyorsunuz?</summary><p>İkisi de olur. İsterseniz seçtiğiniz fayansı siz alırsınız, biz sadece işçilik veririz. İsterseniz bayiye birlikte gider, toptan fiyattan alırız.</p></details>
-      <details><summary>Bir banyo kaç günde biter?</summary><p>Standart bir banyo, söküm dahil 3–5 iş günü sürer. Su yalıtımı ve şap varsa kuruma için bir gün daha eklenir.</p></details>
-      <details><summary>Eski fayansın üstüne döşenir mi?</summary><p>Zemin sağlamsa ve kot müsaitse döşenir; böylece söküm ve moloz masrafı çıkmaz. Ancak boşluk yapan, oynayan fayansın üstüne döşemeyiz.</p></details>
-      <details><summary>Molozu kim atıyor?</summary><p>Biz topluyoruz. Çıkan moloz poşetlenir ve belediyenin gösterdiği döküm alanına götürülür.</p></details>
-      <details><summary>Ödemeyi ne zaman yapıyoruz?</summary><p>Malzeme parası başta, işçiliğin yarısı iş ortasında, kalanı teslimde alınır. Nakit, havale ve kredi kartı geçerlidir.</p></details>
+      <details><summary>Est-ce vous qui achetez les matériaux&nbsp;?</summary><p>Les deux sont possibles. Vous pouvez acheter vous-même le carrelage de votre choix et nous ne facturons alors que la main-d’œuvre. Sinon, nous allons chez le fournisseur avec vous et achetons au prix de gros.</p></details>
+      <details><summary>Combien de temps faut-il pour une salle de bains&nbsp;?</summary><p>Une salle de bains standard demande 5 à 10 jours ouvrés, dépose comprise. S’il faut une étanchéité et une chape, comptez un jour de plus pour le séchage.</p></details>
+      <details><summary>Peut-on poser sur l’ancien carrelage&nbsp;?</summary><p>Oui, si le support est sain et si la hauteur le permet&nbsp;; cela évite les frais de dépose et de gravats. En revanche, nous ne posons jamais sur un carrelage qui sonne creux ou qui bouge.</p></details>
+      <details><summary>Qui évacue les gravats&nbsp;?</summary><p>C’est nous. Les gravats sont ensachés puis déposés à la décharge indiquée par la municipalité.</p></details>
+      <details><summary>Quand faut-il régler&nbsp;?</summary><p>Les matériaux au début, la moitié de la main-d’œuvre à mi-chantier, le solde à la livraison. Espèces, virement et carte bancaire acceptés.</p></details>
     </div>
   </section>
 
   <section id="iletisim" class="sarma bolum">
     <div class="bolum-ust">
-      <h2>İletişim</h2>
-      <p>Telefonla ulaşamazsanız formu doldurun, aynı gün dönüş yapalım.</p>
+      <h2>Contact</h2>
+      <p>Si vous ne parvenez pas à nous joindre par téléphone, remplissez le formulaire&nbsp;: nous vous rappelons le jour même.</p>
     </div>
     <div class="iletisim">
       <div class="bilgi">
-        <h3>Yıldız Yapı</h3>
+        <h3>SARL DURUK</h3>
         <dl>
-          <dt>Telefon</dt><dd><a href="tel:+905550000000">0555 000 00 00</a></dd>
-          <dt>WhatsApp</dt><dd><a href="https://wa.me/905550000000" target="_blank" rel="noopener">0555 000 00 00</a></dd>
-          <dt>Çalışma saatleri</dt><dd>Pazartesi – Cumartesi, 08.00 – 19.00</dd>
-          <dt>Hizmet bölgesi</dt><dd>İzmit, Derince, Körfez, Gölcük, Başiskele, Gebze</dd>
+          <dt>Téléphone</dt><dd><a href="tel:+33647375308">06 47 37 53 08</a></dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/33647375308" target="_blank" rel="noopener">+33 6 47 37 53 08</a></dd>
+          <dt>TikTok</dt><dd><a href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">@sarl.duruk</a></dd>
+          <dt>Horaires</dt><dd>Du lundi au samedi, 08h00 – 19h00</dd>
+          <dt>Zone d’intervention</dt><dd>Dijon, Chenôve, Talant, Quetigny, Longvic, Beaune et toute la Côte-d’Or</dd>
         </dl>
       </div>
 
       <form id="form">
-        <label for="ad">Adınız</label>
+        <label for="ad">Votre nom</label>
         <input id="ad" name="ad" required autocomplete="name">
-        <label for="tel">Telefon</label>
-        <input id="tel" name="tel" type="tel" inputmode="tel" required autocomplete="tel" placeholder="05xx xxx xx xx">
-        <label for="is">Ne yaptırmak istiyorsunuz?</label>
-        <textarea id="is" name="is" placeholder="Örnek: 6 m² banyo, eski fayans sökülecek"></textarea>
-        <button type="submit" class="dugme">WhatsApp’tan gönder</button>
-        <small>Bilgiler WhatsApp mesajı olarak açılır, kaydedilmez.</small>
+        <label for="tel">Téléphone</label>
+        <input id="tel" name="tel" type="tel" required autocomplete="tel" placeholder="05xx xxx xx xx">
+        <label for="is">Quels travaux souhaitez-vous&nbsp;?</label>
+        <textarea id="is" name="is" placeholder="Exemple : salle de bains de 6 m², ancien carrelage à déposer"></textarea>
+        <button type="submit" class="dugme">Envoyer sur WhatsApp</button>
+        <small>Les informations s’ouvrent dans un message WhatsApp&nbsp;; elles ne sont pas enregistrées.</small>
       </form>
     </div>
   </section>
@@ -416,30 +398,27 @@ footer{border-top:1px solid var(--derz-koyu);padding:20px 0 24px;font-size:.85re
 
 <footer>
   <div class="sarma footer-ic">
-    <span>Yıldız Yapı — fayans, seramik ve zemin kaplama</span>
-    <span>Kocaeli</span>
+    <span class="footer-marka"><img class="logo" src="logo.png" alt="" width="455" height="298">SARL DURUK — carrelage, faïence et revêtement de sol</span>
+    <span>Dijon et environs · <a href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">@sarl.duruk</a></span>
   </div>
 </footer>
 
 <div class="mobil-cubuk">
-  <a href="tel:+905550000000">
-    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
-    Ara
-  </a>
-  <a class="wa" href="https://wa.me/905550000000" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.3 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-1.5-.6-3.5-1.8-5-4-.5-.8-1-1.8-1-2.8 0-1 .5-1.5.7-1.7.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4-.1.5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.7 1.9.6.4 1 .6 1.2.7.2 0 .4 0 .5-.2l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .1 0 .5-.1.9z"/></svg>
-    WhatsApp
-  </a>
+  <a href="tel:+33647375308">Appeler</a>
+  <a class="wa" href="https://wa.me/33647375308" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="tt" href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">TikTok</a>
 </div>
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"HomeAndConstructionBusiness",
-  "name":"Yıldız Yapı",
-  "description":"Fayans, seramik ve zemin kaplama uygulaması",
-  "telephone":"+905550000000",
-  "areaServed":"Kocaeli",
+  "name":"SARL DURUK",
+  "description":"Pose de carrelage, de faïence et de revêtements de sol",
+  "telephone":"+33647375308",
+  "areaServed":"Dijon",
+  "address":{"@type":"PostalAddress","addressLocality":"Dijon","addressRegion":"Bourgogne-Franche-Comté","addressCountry":"FR"},
+  "sameAs":["https://www.tiktok.com/@sarl.duruk"],
   "openingHours":"Mo-Sa 08:00-19:00"
 }
 </script>
@@ -450,8 +429,8 @@ document.getElementById('form').addEventListener('submit', function(e){
   var ad = document.getElementById('ad').value.trim();
   var tel = document.getElementById('tel').value.trim();
   var is  = document.getElementById('is').value.trim();
-  var mesaj = 'Merhaba, ben ' + ad + '. Telefon: ' + tel + (is ? '. Yaptırmak istediğim: ' + is : '');
-  window.open('https://wa.me/905550000000?text=' + encodeURIComponent(mesaj), '_blank');
+  var mesaj = 'Bonjour, je suis ' + ad + '. Telephone : ' + tel + (is ? '. Travaux souhaites : ' + is : '');
+  window.open('https://wa.me/33647375308?text=' + encodeURIComponent(mesaj), '_blank');
 });
 </script>
 </body>

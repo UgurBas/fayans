@@ -3,16 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- ============================================================
-     DEĞİŞTİRİLECEK YERLER (sayfada geçtiği her yeri güncelle):
-     1) İşletme adı .......... "SARL DURUK"
-     2) Telefon .............. 06 47 37 53 08  (tel: +33647375308)
-     3) WhatsApp numarası .... wa.me/33647375308  (başında 33, boşluksuz)
-     4) TikTok ............... https://www.tiktok.com/@sarl.duruk
-     5) Bölgeler ............. Dijon, Chenôve, Talant, Quetigny...
-     6) Fotoğraflar .......... "Nos réalisations" bölümündeki kutular
-     ============================================================ -->
+<script>document.documentElement.className+=" js";</script>
 
 <title>SARL DURUK — La qualité, c’est notre métier | Carrelage à Dijon</title>
 <link rel="icon" href="favicon.png" type="image/png">
@@ -196,6 +187,28 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 .footer-marka{display:flex;align-items:center;gap:10px}
 .footer-marka .logo{height:30px;width:auto;flex:none}
 
+/* ---------- açılış hareketleri: fayans döşenir gibi ---------- */
+@keyframes dose-gir{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+.js .ac{opacity:0;transform:translateY(18px) scale(.985);
+  transition:opacity .6s cubic-bezier(.22,.61,.36,1),
+             transform .6s cubic-bezier(.22,.61,.36,1),
+             filter .6s ease}
+.js .ac.gorundu{opacity:1;transform:none}
+/* fotoğraflar: karo yerine oturur gibi hafif büyüyerek ve aydınlanarak */
+.js .foto.ac{transform:scale(.93);filter:brightness(.72)}
+.js .foto.ac.gorundu{transform:none;filter:none;transition-duration:.75s}
+/* kart başlığındaki derz çizgisi kart göründükten sonra çizilir */
+.js .kart .cizgi{width:0;transition:width .5s .2s cubic-bezier(.22,.61,.36,1)}
+.js .kart.gorundu .cizgi{width:34px}
+/* hero: sayfa açılışında sırayla yerleşir */
+.js .hero-ic h1{animation:dose-gir .75s .06s both}
+.js .hero-ic .giris{animation:dose-gir .75s .2s both}
+.js .hero-ic .eylem{animation:dose-gir .75s .32s both}
+.js .rozet{animation:dose-gir .6s both}
+.js .rozet:nth-child(1){animation-delay:.44s}
+.js .rozet:nth-child(2){animation-delay:.52s}
+.js .rozet:nth-child(3){animation-delay:.6s}
+
 /* ---------- mobil arama çubuğu ---------- */
 .mobil-cubuk{position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;gap:1px;background:var(--derz-koyu)}
 .mobil-cubuk a{flex:1;text-align:center;padding:17px 8px;text-decoration:none;font-weight:600;background:var(--sir);color:#fff}
@@ -277,35 +290,35 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
   </section>
 
   <section id="hizmetler" class="sarma bolum">
-    <div class="bolum-ust">
+    <div class="bolum-ust ac">
       <h2>Nos prestations</h2>
       <p>Nous intervenons à toutes les échelles, du simple contour de receveur de douche au sol d’un appartement entier.</p>
     </div>
     <div class="izgara uc">
-      <article class="kart"><div class="cizgi"></div><h3>Carrelage et faïence de salle de bains</h3><p>Revêtement complet du mur au sol. La dépose de l’ancien carrelage et l’évacuation des gravats sont comprises dans le prix.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Revêtement de sol, grès cérame</h3><p>Séjour, couloir, balcon et terrasse. Les différences de niveau et les chapes abîmées sont reprises avant la pose.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Crédence de cuisine</h3><p>Faïence, mosaïque et verre découpés sur mesure. Les réservations pour prises, plaque et hotte sont coupées proprement au disque diamant.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Rénovation des joints et du silicone</h3><p>Nous retirons les joints noircis et refaisons joints et silicone anti-moisissure. Dans la plupart des salles de bains, c’est terminé en une journée.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Étanchéité</h3><p>Étanchéité liquide appliquée sous le carrelage. Le receveur, le siphon et la jonction mur-sol sont traités en plus.</p></article>
-      <article class="kart"><div class="cizgi"></div><h3>Façades et escaliers</h3><p>Entrée d’immeuble, marches d’escalier et abords du bâtiment. Nous utilisons des matériaux résistants au gel.</p></article>
+      <article class="kart ac"><div class="cizgi"></div><h3>Carrelage et faïence de salle de bains</h3><p>Revêtement complet du mur au sol. La dépose de l’ancien carrelage et l’évacuation des gravats sont comprises dans le prix.</p></article>
+      <article class="kart ac"><div class="cizgi"></div><h3>Revêtement de sol, grès cérame</h3><p>Séjour, couloir, balcon et terrasse. Les différences de niveau et les chapes abîmées sont reprises avant la pose.</p></article>
+      <article class="kart ac"><div class="cizgi"></div><h3>Crédence de cuisine</h3><p>Faïence, mosaïque et verre découpés sur mesure. Les réservations pour prises, plaque et hotte sont coupées proprement au disque diamant.</p></article>
+      <article class="kart ac"><div class="cizgi"></div><h3>Rénovation des joints et du silicone</h3><p>Nous retirons les joints noircis et refaisons joints et silicone anti-moisissure. Dans la plupart des salles de bains, c’est terminé en une journée.</p></article>
+      <article class="kart ac"><div class="cizgi"></div><h3>Étanchéité</h3><p>Étanchéité liquide appliquée sous le carrelage. Le receveur, le siphon et la jonction mur-sol sont traités en plus.</p></article>
+      <article class="kart ac"><div class="cizgi"></div><h3>Façades et escaliers</h3><p>Entrée d’immeuble, marches d’escalier et abords du bâtiment. Nous utilisons des matériaux résistants au gel.</p></article>
     </div>
   </section>
 
   <section id="surec" class="sarma bolum">
-    <div class="bolum-ust">
+    <div class="bolum-ust ac">
       <h2>Notre méthode</h2>
       <p>Avant de commencer, nous donnons le prix et le délai par écrit.</p>
     </div>
     <div class="izgara dort">
-      <div class="adim"><span class="no">1. Visite</span><h3>Métré sur place</h3><p>Nous mesurons la surface et vérifions l’état du support et de la plomberie. La visite est gratuite.</p></div>
-      <div class="adim"><span class="no">2. Devis</span><h3>Prix écrit</h3><p>Matériaux et main-d’œuvre sont détaillés séparément. Le prix ne change pas en fin de chantier.</p></div>
-      <div class="adim"><span class="no">3. Chantier</span><h3>Dépose et pose</h3><p>Dépose, chape, étanchéité puis pose s’enchaînent dans l’ordre. Le chantier est rangé chaque soir.</p></div>
-      <div class="adim"><span class="no">4. Livraison</span><h3>Contrôle ensemble</h3><p>Une fois les joints et le silicone secs, nous parcourons le chantier avec vous et reprenons ce qui manque.</p></div>
+      <div class="adim ac"><span class="no">1. Visite</span><h3>Métré sur place</h3><p>Nous mesurons la surface et vérifions l’état du support et de la plomberie. La visite est gratuite.</p></div>
+      <div class="adim ac"><span class="no">2. Devis</span><h3>Prix écrit</h3><p>Matériaux et main-d’œuvre sont détaillés séparément. Le prix ne change pas en fin de chantier.</p></div>
+      <div class="adim ac"><span class="no">3. Chantier</span><h3>Dépose et pose</h3><p>Dépose, chape, étanchéité puis pose s’enchaînent dans l’ordre. Le chantier est rangé chaque soir.</p></div>
+      <div class="adim ac"><span class="no">4. Livraison</span><h3>Contrôle ensemble</h3><p>Une fois les joints et le silicone secs, nous parcourons le chantier avec vous et reprenons ce qui manque.</p></div>
     </div>
   </section>
 
   <section id="isler" class="sarma bolum">
-    <div class="bolum-ust">
+    <div class="bolum-ust ac">
       <h2>Nos réalisations</h2>
       <p>Salles de bains, cuisines et sols réalisés récemment autour de Dijon. Retrouvez aussi nos chantiers en vidéo sur TikTok.</p>
     </div>
@@ -313,32 +326,32 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
          fotoğraflarını aynı isimle kaydetmen yeterli (ör. fotograflar/salle-de-bains.jpg).
          Şu anki görseller Pexels'ten alınmış serbest lisanslı geçici fotoğraflardır. -->
     <div class="galeri">
-      <figure class="foto">
+      <figure class="foto ac">
         <img src="fotograflar/salle-de-bains.jpg" alt="Salle de bains entièrement carrelée, murs et sol" loading="lazy">
         <figcaption class="etiket">Salle de bains complète — Dijon</figcaption>
       </figure>
-      <figure class="foto">
+      <figure class="foto ac">
         <img src="fotograflar/credence-cuisine.jpg" alt="Pose d’une crédence en mosaïque dans une cuisine" loading="lazy">
         <figcaption class="etiket">Crédence de cuisine — Chenôve</figcaption>
       </figure>
-      <figure class="foto">
+      <figure class="foto ac">
         <img src="fotograflar/sol-gres-cerame.jpg" alt="Pose d’un sol en grès cérame sur chantier" loading="lazy">
         <figcaption class="etiket">Sol en grès cérame — Talant</figcaption>
       </figure>
-      <figure class="foto">
+      <figure class="foto ac">
         <img src="fotograflar/douche-etancheite.jpg" alt="Douche à l’italienne carrelée après étanchéité" loading="lazy">
         <figcaption class="etiket">Douche et étanchéité — Quetigny</figcaption>
       </figure>
-      <figure class="foto">
+      <figure class="foto ac">
         <img src="fotograflar/balcon-terrasse.jpg" alt="Terrasse et balcon carrelés en terre cuite" loading="lazy">
         <figcaption class="etiket">Balcon et terrasse — Longvic</figcaption>
       </figure>
-      <figure class="foto">
+      <figure class="foto ac">
         <img src="fotograflar/escalier.jpg" alt="Escalier et mur carrelés dans un immeuble" loading="lazy">
         <figcaption class="etiket">Escalier d’immeuble — Beaune</figcaption>
       </figure>
     </div>
-    <div class="galeri-alt">
+    <div class="galeri-alt ac">
       <a class="dugme tiktok" href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">Voir nos chantiers sur TikTok</a>
       <small>@sarl.duruk — nouvelles vidéos de chantier chaque semaine.</small>
     </div>
@@ -346,32 +359,32 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 
   <section class="serit">
     <div class="sarma serit-ic">
-      <div>
+      <div class="ac">
         <h2>Nous pouvons passer faire la visite cette semaine</h2>
         <p>Envoyez-nous une photo, nous vous donnons une première estimation par téléphone.</p>
       </div>
-      <a href="https://wa.me/33647375308?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20visite%20technique." class="dugme" target="_blank" rel="noopener">Envoyer une photo sur WhatsApp</a>
+      <a href="https://wa.me/33647375308?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20visite%20technique." class="dugme ac" target="_blank" rel="noopener">Envoyer une photo sur WhatsApp</a>
     </div>
   </section>
 
   <section id="sss" class="sarma bolum">
-    <div class="bolum-ust"><h2>Questions fréquentes</h2></div>
+    <div class="bolum-ust ac"><h2>Questions fréquentes</h2></div>
     <div class="sss">
-      <details><summary>Est-ce vous qui achetez les matériaux&nbsp;?</summary><p>Les deux sont possibles. Vous pouvez acheter vous-même le carrelage de votre choix et nous ne facturons alors que la main-d’œuvre. Sinon, nous allons chez le fournisseur avec vous et achetons au prix de gros.</p></details>
-      <details><summary>Combien de temps faut-il pour une salle de bains&nbsp;?</summary><p>Une salle de bains standard demande 5 à 10 jours ouvrés, dépose comprise. S’il faut une étanchéité et une chape, comptez un jour de plus pour le séchage.</p></details>
-      <details><summary>Peut-on poser sur l’ancien carrelage&nbsp;?</summary><p>Oui, si le support est sain et si la hauteur le permet&nbsp;; cela évite les frais de dépose et de gravats. En revanche, nous ne posons jamais sur un carrelage qui sonne creux ou qui bouge.</p></details>
-      <details><summary>Qui évacue les gravats&nbsp;?</summary><p>C’est nous. Les gravats sont ensachés puis déposés à la décharge indiquée par la municipalité.</p></details>
-      <details><summary>Quand faut-il régler&nbsp;?</summary><p>Les matériaux au début, la moitié de la main-d’œuvre à mi-chantier, le solde à la livraison. Espèces, virement et carte bancaire acceptés.</p></details>
+      <details class="ac"><summary>Est-ce vous qui achetez les matériaux&nbsp;?</summary><p>Les deux sont possibles. Vous pouvez acheter vous-même le carrelage de votre choix et nous ne facturons alors que la main-d’œuvre. Sinon, nous allons chez le fournisseur avec vous et achetons au prix de gros.</p></details>
+      <details class="ac"><summary>Combien de temps faut-il pour une salle de bains&nbsp;?</summary><p>Une salle de bains standard demande 5 à 10 jours ouvrés, dépose comprise. S’il faut une étanchéité et une chape, comptez un jour de plus pour le séchage.</p></details>
+      <details class="ac"><summary>Peut-on poser sur l’ancien carrelage&nbsp;?</summary><p>Oui, si le support est sain et si la hauteur le permet&nbsp;; cela évite les frais de dépose et de gravats. En revanche, nous ne posons jamais sur un carrelage qui sonne creux ou qui bouge.</p></details>
+      <details class="ac"><summary>Qui évacue les gravats&nbsp;?</summary><p>C’est nous. Les gravats sont ensachés puis déposés à la décharge indiquée par la municipalité.</p></details>
+      <details class="ac"><summary>Quand faut-il régler&nbsp;?</summary><p>Les matériaux au début, la moitié de la main-d’œuvre à mi-chantier, le solde à la livraison. Espèces, virement et carte bancaire acceptés.</p></details>
     </div>
   </section>
 
   <section id="iletisim" class="sarma bolum">
-    <div class="bolum-ust">
+    <div class="bolum-ust ac">
       <h2>Contact</h2>
       <p>Si vous ne parvenez pas à nous joindre par téléphone, remplissez le formulaire&nbsp;: nous vous rappelons le jour même.</p>
     </div>
     <div class="iletisim">
-      <div class="bilgi">
+      <div class="bilgi ac">
         <h3>SARL DURUK</h3>
         <dl>
           <dt>Téléphone</dt><dd><a href="tel:+33647375308">06 47 37 53 08</a></dd>
@@ -382,7 +395,7 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
         </dl>
       </div>
 
-      <form id="form">
+      <form id="form" class="ac">
         <label for="ad">Votre nom</label>
         <input id="ad" name="ad" required autocomplete="name">
         <label for="tel">Téléphone</label>
@@ -424,6 +437,29 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 </script>
 
 <script>
+(function(){
+  var ogeler = document.querySelectorAll('.ac');
+  var azHareket = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!('IntersectionObserver' in window) || azHareket) {
+    for (var i = 0; i < ogeler.length; i++) ogeler[i].classList.add('gorundu');
+    return;
+  }
+  var gozcu = new IntersectionObserver(function(girdiler){
+    for (var i = 0; i < girdiler.length; i++) {
+      if (!girdiler[i].isIntersecting) continue;
+      var el = girdiler[i].target, kardesler = el.parentElement.children, sira = 0;
+      for (var k = 0; k < kardesler.length; k++) { if (kardesler[k] === el) { sira = k; break; } }
+      el.style.transitionDelay = Math.min(sira, 6) * 85 + 'ms';
+      el.classList.add('gorundu');
+      gozcu.unobserve(el);
+    }
+  }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+  for (var j = 0; j < ogeler.length; j++) {
+    if (ogeler[j].getBoundingClientRect().bottom < 0) { ogeler[j].classList.add('gorundu'); continue; }
+    gozcu.observe(ogeler[j]);
+  }
+})();
+
 document.getElementById('form').addEventListener('submit', function(e){
   e.preventDefault();
   var ad = document.getElementById('ad').value.trim();
