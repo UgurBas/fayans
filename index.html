@@ -6,16 +6,18 @@
 
 <!-- ============================================================
      DEĞİŞTİRİLECEK YERLER (sayfada geçtiği her yeri güncelle):
-     1) İşletme adı .......... "Yıldız Yapı"
-     2) Telefon .............. 0555 000 00 00
-     3) WhatsApp numarası .... wa.me/905550000000  (başında 90, boşluksuz)
-     4) Bölgeler ............. İzmit, Gebze, Derince...
-     5) Fotoğraflar .......... "İşlerimiz" bölümündeki kutular
+     1) İşletme adı .......... "SARL DURUK"
+     2) Telefon .............. 06 47 37 53 08  (tel: +33647375308)
+     3) WhatsApp numarası .... wa.me/33647375308  (başında 33, boşluksuz)
+     4) TikTok ............... https://www.tiktok.com/@sarl.duruk
+     5) Bölgeler ............. Dijon, Chenôve, Talant, Quetigny...
+     6) Fotoğraflar .......... "Nos réalisations" bölümündeki kutular
      ============================================================ -->
 
-<title>Yıldız Yapı — Pose de carrelage, faïence et grès cérame | Kocaeli</title>
-<meta name="description" content="Pose de carrelage et de faïence pour salles de bains, cuisines et sols à Kocaeli et ses environs. Dépose, étanchéité, rejointoiement et silicone. Visite technique gratuite.">
-<meta property="og:title" content="Yıldız Yapı — Pose de carrelage et de faïence">
+<title>SARL DURUK — La qualité, c’est notre métier | Carrelage à Dijon</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<meta name="description" content="Pose de carrelage et de faïence pour salles de bains, cuisines et sols à Dijon et ses environs. Dépose, étanchéité, rejointoiement et silicone. Visite technique gratuite.">
+<meta property="og:title" content="SARL DURUK — La qualité, c’est notre métier">
 <meta property="og:description" content="Revêtement de salle de bains, cuisine et sol. Visite technique et devis gratuits.">
 <meta property="og:type" content="website">
 
@@ -55,7 +57,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--sir);outline-offset:3px}
 
 .sarma{max-width:1120px;margin:0 auto;padding:0 16px}
-.bolum{padding:64px 0}
+.bolum{padding-block:64px}
 h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:700}
 h2{font-size:clamp(1.6rem,4vw,2.3rem);margin-bottom:8px}
 .bolum-ust{margin-bottom:28px;max-width:60ch}
@@ -68,8 +70,10 @@ header{
   border-bottom:1px solid var(--derz-koyu);
 }
 .bar{display:flex;align-items:center;gap:20px;height:64px}
-.marka{font-weight:800;font-size:1.18rem;letter-spacing:-.03em;text-decoration:none}
-.marka span{display:block;font-size:.66rem;font-weight:500;color:var(--soluk);letter-spacing:.04em}
+.marka{display:flex;align-items:center;gap:11px;text-decoration:none}
+.marka .logo{height:40px;width:auto;flex:none}
+.marka-yazi{font-weight:800;font-size:1.18rem;letter-spacing:-.03em;line-height:1.15}
+.marka-yazi span{display:block;font-size:.66rem;font-weight:500;color:var(--soluk);letter-spacing:.04em}
 nav{margin-left:auto;display:flex;gap:22px}
 nav a{text-decoration:none;font-size:.94rem;font-weight:500;color:var(--soluk)}
 nav a:hover{color:var(--sir)}
@@ -97,7 +101,7 @@ nav a:hover{color:var(--sir)}
   border-bottom:var(--bosluk) solid var(--derz-koyu);
   color:#eef3f2;
 }
-.hero{padding:64px 0 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero{padding-block:64px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
 .hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);font-weight:800;max-width:16ch;color:#fff}
 .hero p.giris{margin-top:18px;font-size:1.12rem;color:#bcd6d7;max-width:46ch}
 .eylem{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
@@ -150,9 +154,16 @@ nav a:hover{color:var(--sir)}
 
 /* ---------- işlerimiz ---------- */
 .galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--bosluk)}
-.foto{aspect-ratio:4/3;background:#cfccc3;display:flex;align-items:center;justify-content:center;
-  color:#7b7970;font-size:.86rem;text-align:center;padding:12px;overflow:hidden}
-.foto img{width:100%;height:100%;object-fit:cover}
+.foto{aspect-ratio:4/3;position:relative;overflow:hidden;background:#c4c0b6}
+.foto img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.foto:hover img{transform:scale(1.045)}
+.foto .etiket{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 13px;
+  font-size:.9rem;font-weight:600;color:#fff;line-height:1.3;
+  background:linear-gradient(0deg,rgba(6,30,32,.92),rgba(6,30,32,.35) 55%,rgba(6,30,32,0))}
+.galeri-alt{margin-top:var(--bosluk);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.galeri-alt small{color:var(--soluk);font-size:.86rem}
+.dugme.tiktok{background:#14181a;color:#fff}
+.dugme.tiktok:hover{background:#000}
 
 /* ---------- şerit ---------- */
 .serit{background:var(--sir);color:#fff;padding:44px 0}
@@ -186,12 +197,15 @@ form .dugme{width:100%;margin-top:20px}
 form small{display:block;margin-top:10px;color:var(--soluk);font-size:.8rem}
 
 footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;color:var(--soluk)}
-.footer-ic{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.footer-ic{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+.footer-marka{display:flex;align-items:center;gap:10px}
+.footer-marka .logo{height:30px;width:auto;flex:none}
 
 /* ---------- mobil arama çubuğu ---------- */
 .mobil-cubuk{position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;gap:1px;background:var(--derz-koyu)}
 .mobil-cubuk a{flex:1;text-align:center;padding:17px 8px;text-decoration:none;font-weight:600;background:var(--sir);color:#fff}
 .mobil-cubuk a.wa{background:#128c4a}
+.mobil-cubuk a.tt{background:#14181a}
 
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;gap:34px}
@@ -201,8 +215,10 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 }
 @media(max-width:640px){
   nav{display:none}
-  .bar .dugme{margin-left:auto}
-  .bolum{padding:48px 0}
+  .bar .dugme{margin-left:auto;font-size:.84rem;padding:9px 12px}
+  .marka .logo{height:34px}
+  .marka-yazi{font-size:1.05rem}
+  .bolum{padding-block:48px}
   .uc,.dort,.iki,.galeri{grid-template-columns:1fr}
   .galeri{grid-template-columns:repeat(2,1fr)}
   .mobil-cubuk{display:flex}
@@ -217,7 +233,10 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 
 <header>
   <div class="sarma bar">
-    <a href="#" class="marka">Yıldız Yapı<span>pose de carrelage et de faïence</span></a>
+    <a href="#" class="marka">
+      <img class="logo" src="logo.png" alt="" width="455" height="298">
+      <span class="marka-yazi">SARL DURUK<span>la qualité, c’est notre métier</span></span>
+    </a>
     <nav>
       <a href="#hizmetler">Prestations</a>
       <a href="#surec">Notre méthode</a>
@@ -225,7 +244,7 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
       <a href="#sss">Questions fréquentes</a>
       <a href="#iletisim">Contact</a>
     </nav>
-    <a href="tel:+905550000000" class="dugme ara">0555 000 00 00</a>
+    <a href="tel:+33647375308" class="dugme ara">06 47 37 53 08</a>
   </div>
 </header>
 
@@ -233,11 +252,11 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
   <section class="hero-alan">
   <div class="sarma hero">
     <div>
-      <h1>Nous posons le carrelage&nbsp;: les mesures tombent juste, les joints restent nets.</h1>
-      <p class="giris">Travaux de revêtement pour salles de bains, cuisines et sols à Kocaeli et ses environs. Dépose, étanchéité et évacuation des gravats comprises. Visite technique et devis gratuits.</p>
+      <h1>La qualité, c’est notre métier.</h1>
+      <p class="giris">Carrelage, faïence et grès cérame à Dijon et ses environs&nbsp;: les mesures tombent juste, les joints restent nets. Dépose, étanchéité et évacuation des gravats comprises. Visite technique et devis gratuits.</p>
       <div class="eylem">
-        <a href="tel:+905550000000" class="dugme ara">Appelez-nous</a>
-        <a href="https://wa.me/905550000000?text=Bonjour%2C%20je%20souhaite%20recevoir%20un%20devis%20pour%20des%20travaux%20de%20carrelage." class="dugme bos" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a href="tel:+33647375308" class="dugme ara">Appelez-nous</a>
+        <a href="https://wa.me/33647375308?text=Bonjour%2C%20je%20souhaite%20recevoir%20un%20devis%20pour%20des%20travaux%20de%20carrelage." class="dugme bos" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
       </div>
       <div class="rozetler">
         <div class="rozet"><b>18 ans</b><small>d’expérience sur chantier</small></div>
@@ -290,18 +309,40 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
   <section id="isler" class="sarma bolum">
     <div class="bolum-ust">
       <h2>Nos réalisations</h2>
-      <p>Salles de bains, cuisines et sols que nous avons réalisés récemment.</p>
+      <p>Salles de bains, cuisines et sols réalisés récemment autour de Dijon. Retrouvez aussi nos chantiers en vidéo sur TikTok.</p>
     </div>
-    <!-- FOTOĞRAF EKLEME: aşağıdaki kutuların içine
-         <img src="fotograflar/banyo-1.jpg" alt="Banyo fayans uygulaması"> yaz,
-         kutudaki yazıyı sil. -->
+    <!-- FOTOĞRAF DEĞİŞTİRME: fotograflar/ klasöründeki dosyaların üzerine kendi
+         fotoğraflarını aynı isimle kaydetmen yeterli (ör. fotograflar/salle-de-bains.jpg).
+         Şu anki görseller Pexels'ten alınmış serbest lisanslı geçici fotoğraflardır. -->
     <div class="galeri">
-      <div class="foto">Photo 1 — salle de bains</div>
-      <div class="foto">Photo 2 — crédence de cuisine</div>
-      <div class="foto">Photo 3 — sol de séjour</div>
-      <div class="foto">Photo 4 — receveur de douche</div>
-      <div class="foto">Photo 5 — balcon</div>
-      <div class="foto">Photo 6 — escalier</div>
+      <figure class="foto">
+        <img src="fotograflar/salle-de-bains.jpg" alt="Salle de bains entièrement carrelée, murs et sol" loading="lazy">
+        <figcaption class="etiket">Salle de bains complète — Dijon</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/credence-cuisine.jpg" alt="Pose d’une crédence en mosaïque dans une cuisine" loading="lazy">
+        <figcaption class="etiket">Crédence de cuisine — Chenôve</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/sol-gres-cerame.jpg" alt="Pose d’un sol en grès cérame sur chantier" loading="lazy">
+        <figcaption class="etiket">Sol en grès cérame — Talant</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/douche-etancheite.jpg" alt="Douche à l’italienne carrelée après étanchéité" loading="lazy">
+        <figcaption class="etiket">Douche et étanchéité — Quetigny</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/balcon-terrasse.jpg" alt="Terrasse et balcon carrelés en terre cuite" loading="lazy">
+        <figcaption class="etiket">Balcon et terrasse — Longvic</figcaption>
+      </figure>
+      <figure class="foto">
+        <img src="fotograflar/escalier.jpg" alt="Escalier et mur carrelés dans un immeuble" loading="lazy">
+        <figcaption class="etiket">Escalier d’immeuble — Beaune</figcaption>
+      </figure>
+    </div>
+    <div class="galeri-alt">
+      <a class="dugme tiktok" href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">Voir nos chantiers sur TikTok</a>
+      <small>@sarl.duruk — nouvelles vidéos de chantier chaque semaine.</small>
     </div>
   </section>
 
@@ -311,7 +352,7 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
         <h2>Nous pouvons passer faire la visite cette semaine</h2>
         <p>Envoyez-nous une photo, nous vous donnons une première estimation par téléphone.</p>
       </div>
-      <a href="https://wa.me/905550000000?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20visite%20technique." class="dugme" target="_blank" rel="noopener">Envoyer une photo sur WhatsApp</a>
+      <a href="https://wa.me/33647375308?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20visite%20technique." class="dugme" target="_blank" rel="noopener">Envoyer une photo sur WhatsApp</a>
     </div>
   </section>
 
@@ -319,7 +360,7 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
     <div class="bolum-ust"><h2>Questions fréquentes</h2></div>
     <div class="sss">
       <details><summary>Est-ce vous qui achetez les matériaux&nbsp;?</summary><p>Les deux sont possibles. Vous pouvez acheter vous-même le carrelage de votre choix et nous ne facturons alors que la main-d’œuvre. Sinon, nous allons chez le fournisseur avec vous et achetons au prix de gros.</p></details>
-      <details><summary>Combien de temps faut-il pour une salle de bains&nbsp;?</summary><p>Une salle de bains standard demande 3 à 5 jours ouvrés, dépose comprise. S’il faut une étanchéité et une chape, comptez un jour de plus pour le séchage.</p></details>
+      <details><summary>Combien de temps faut-il pour une salle de bains&nbsp;?</summary><p>Une salle de bains standard demande 5 à 10 jours ouvrés, dépose comprise. S’il faut une étanchéité et une chape, comptez un jour de plus pour le séchage.</p></details>
       <details><summary>Peut-on poser sur l’ancien carrelage&nbsp;?</summary><p>Oui, si le support est sain et si la hauteur le permet&nbsp;; cela évite les frais de dépose et de gravats. En revanche, nous ne posons jamais sur un carrelage qui sonne creux ou qui bouge.</p></details>
       <details><summary>Qui évacue les gravats&nbsp;?</summary><p>C’est nous. Les gravats sont ensachés puis déposés à la décharge indiquée par la municipalité.</p></details>
       <details><summary>Quand faut-il régler&nbsp;?</summary><p>Les matériaux au début, la moitié de la main-d’œuvre à mi-chantier, le solde à la livraison. Espèces, virement et carte bancaire acceptés.</p></details>
@@ -333,12 +374,13 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
     </div>
     <div class="iletisim">
       <div class="bilgi">
-        <h3>Yıldız Yapı</h3>
+        <h3>SARL DURUK</h3>
         <dl>
-          <dt>Téléphone</dt><dd><a href="tel:+905550000000">0555 000 00 00</a></dd>
-          <dt>WhatsApp</dt><dd><a href="https://wa.me/905550000000" target="_blank" rel="noopener">0555 000 00 00</a></dd>
+          <dt>Téléphone</dt><dd><a href="tel:+33647375308">06 47 37 53 08</a></dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/33647375308" target="_blank" rel="noopener">+33 6 47 37 53 08</a></dd>
+          <dt>TikTok</dt><dd><a href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">@sarl.duruk</a></dd>
           <dt>Horaires</dt><dd>Du lundi au samedi, 08h00 – 19h00</dd>
-          <dt>Zone d’intervention</dt><dd>İzmit, Derince, Körfez, Gölcük, Başiskele, Gebze</dd>
+          <dt>Zone d’intervention</dt><dd>Dijon, Chenôve, Talant, Quetigny, Longvic, Beaune et toute la Côte-d’Or</dd>
         </dl>
       </div>
 
@@ -358,24 +400,27 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 
 <footer>
   <div class="sarma footer-ic">
-    <span>Yıldız Yapı — carrelage, faïence et revêtement de sol</span>
-    <span>Kocaeli</span>
+    <span class="footer-marka"><img class="logo" src="logo.png" alt="" width="455" height="298">SARL DURUK — carrelage, faïence et revêtement de sol</span>
+    <span>Dijon et environs · <a href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">@sarl.duruk</a></span>
   </div>
 </footer>
 
 <div class="mobil-cubuk">
-  <a href="tel:+905550000000">Appeler</a>
-  <a class="wa" href="https://wa.me/905550000000" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="tel:+33647375308">Appeler</a>
+  <a class="wa" href="https://wa.me/33647375308" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="tt" href="https://www.tiktok.com/@sarl.duruk" target="_blank" rel="noopener">TikTok</a>
 </div>
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"HomeAndConstructionBusiness",
-  "name":"Yıldız Yapı",
+  "name":"SARL DURUK",
   "description":"Pose de carrelage, de faïence et de revêtements de sol",
-  "telephone":"+905550000000",
-  "areaServed":"Kocaeli",
+  "telephone":"+33647375308",
+  "areaServed":"Dijon",
+  "address":{"@type":"PostalAddress","addressLocality":"Dijon","addressRegion":"Bourgogne-Franche-Comté","addressCountry":"FR"},
+  "sameAs":["https://www.tiktok.com/@sarl.duruk"],
   "openingHours":"Mo-Sa 08:00-19:00"
 }
 </script>
@@ -387,7 +432,7 @@ document.getElementById('form').addEventListener('submit', function(e){
   var tel = document.getElementById('tel').value.trim();
   var is  = document.getElementById('is').value.trim();
   var mesaj = 'Bonjour, je suis ' + ad + '. Telephone : ' + tel + (is ? '. Travaux souhaites : ' + is : '');
-  window.open('https://wa.me/905550000000?text=' + encodeURIComponent(mesaj), '_blank');
+  window.open('https://wa.me/33647375308?text=' + encodeURIComponent(mesaj), '_blank');
 });
 </script>
 </body>
