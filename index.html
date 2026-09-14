@@ -93,15 +93,30 @@ nav a:hover{color:var(--sir)}
 
 /* ---------- hero ---------- */
 .hero-alan{
+  position:relative;overflow:hidden;
   background-color:var(--sir-koyu);
-  background-image:
-    radial-gradient(130% 100% at 76% 12%,rgba(46,160,166,.5),transparent 58%),
-    repeating-linear-gradient(90deg,rgba(255,255,255,.075) 0 1px,transparent 1px 68px),
-    repeating-linear-gradient(0deg,rgba(255,255,255,.075) 0 1px,transparent 1px 68px);
+  background-image:radial-gradient(130% 100% at 76% 12%,rgba(46,160,166,.5),transparent 58%);
   border-bottom:var(--bosluk) solid var(--derz-koyu);
   color:#eef3f2;
 }
-.hero{padding-block:64px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+/* is fotografi: cok yavas yakinlasip geri acilir */
+.hero-alan::before{
+  content:"";position:absolute;inset:0;
+  background:url(fotograflar/hero-pose.jpg) center/cover no-repeat;
+  animation:yavas-yakinlas 28s ease-in-out infinite alternate;
+  will-change:transform;
+}
+/* koyu filtre + fayans derz cizgileri fotografin uzerinde kalir */
+.hero-alan::after{
+  content:"";position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 68px),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 1px,transparent 1px 68px),
+    linear-gradient(102deg,rgba(10,59,63,.92) 0 30%,rgba(10,59,63,.7) 70%,rgba(10,59,63,.52)),
+    linear-gradient(180deg,rgba(10,59,63,.18),rgba(10,59,63,.46));
+}
+.hero{position:relative;z-index:1;padding-block:108px 116px}
+.hero-ic{max-width:38rem}
 .hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);font-weight:800;max-width:16ch;color:#fff}
 .hero p.giris{margin-top:18px;font-size:1.12rem;color:#bcd6d7;max-width:46ch}
 .eylem{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
@@ -112,27 +127,7 @@ nav a:hover{color:var(--sir)}
 .rozet b{display:block;font-size:1.32rem;font-weight:800;letter-spacing:-.02em;color:#fff}
 .rozet small{color:#a7c4c5;font-size:.84rem}
 
-/* fayans duvarı */
-.duvar{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--bosluk);aspect-ratio:1/1}
-.karo{background:var(--fayans);position:relative;overflow:hidden}
-.karo::after{content:"";position:absolute;inset:0;background:linear-gradient(148deg,rgba(255,255,255,.9),rgba(13,82,87,.06) 62%,rgba(13,82,87,.14))}
-.karo.k1{background:#17787e}
-.karo.k2{background:#0f5c62}
-.karo.k3{background:#e7e3da}
-.karo.k4{background:#2ea0a6}
-.karo.genis{grid-column:span 2}
-.karo.uzun{grid-row:span 2}
-@keyframes dose{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.duvar .karo{animation:dose .5s both}
-.duvar .karo:nth-child(1){animation-delay:.02s}
-.duvar .karo:nth-child(2){animation-delay:.08s}
-.duvar .karo:nth-child(3){animation-delay:.14s}
-.duvar .karo:nth-child(4){animation-delay:.2s}
-.duvar .karo:nth-child(5){animation-delay:.26s}
-.duvar .karo:nth-child(6){animation-delay:.32s}
-.duvar .karo:nth-child(7){animation-delay:.38s}
-.duvar .karo:nth-child(8){animation-delay:.44s}
-.duvar .karo:nth-child(9){animation-delay:.5s}
+@keyframes yavas-yakinlas{from{transform:scale(1.02)}to{transform:scale(1.16)}}
 
 /* ---------- hizmetler ---------- */
 .izgara{display:grid;gap:var(--bosluk)}
@@ -208,12 +203,26 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 .mobil-cubuk a.tt{background:#14181a}
 
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;gap:34px}
-  .duvar{aspect-ratio:4/3}
+  .hero{padding-block:84px 92px}
+  /* tablette ust bar sikismasin: slogan gizlenir, menu kuculur, hicbir yazi kirilmaz */
+  .marka-yazi span{display:none}
+  .marka-yazi{font-size:1.06rem;white-space:nowrap}
+  .marka .logo{height:34px}
+  .bar{gap:14px}
+  nav{gap:15px}
+  nav a{font-size:.88rem;white-space:nowrap}
+  .bar .dugme{font-size:.85rem;padding:9px 13px;white-space:nowrap}
   .uc,.dort{grid-template-columns:repeat(2,1fr)}
   .iletisim{grid-template-columns:1fr}
 }
+@media(max-width:820px){
+  .bar{height:auto;flex-wrap:wrap;padding-block:9px;gap:8px 14px}
+  .bar .dugme{margin-left:auto}
+  nav{order:3;width:100%;margin-left:0;justify-content:space-between;gap:10px;
+      border-top:1px solid var(--derz-koyu);padding-top:8px}
+}
 @media(max-width:640px){
+  .hero{padding-block:54px 58px}
   nav{display:none}
   .bar .dugme{margin-left:auto;font-size:.84rem;padding:9px 12px}
   .marka .logo{height:34px}
@@ -251,7 +260,7 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
 <main>
   <section class="hero-alan">
   <div class="sarma hero">
-    <div>
+    <div class="hero-ic">
       <h1>La qualité, c’est notre métier.</h1>
       <p class="giris">Carrelage, faïence et grès cérame à Dijon et ses environs&nbsp;: les mesures tombent juste, les joints restent nets. Dépose, étanchéité et évacuation des gravats comprises. Visite technique et devis gratuits.</p>
       <div class="eylem">
@@ -263,17 +272,6 @@ footer{border-top:1px solid var(--derz-koyu);padding:26px 0;font-size:.88rem;col
         <div class="rozet"><b>Gratuite</b><small>visite technique sur place</small></div>
         <div class="rozet"><b>2 ans</b><small>de garantie sur la main-d’œuvre</small></div>
       </div>
-    </div>
-    <div class="duvar" aria-hidden="true">
-      <div class="karo"></div>
-      <div class="karo k1"></div>
-      <div class="karo genis"></div>
-      <div class="karo k3"></div>
-      <div class="karo uzun k4"></div>
-      <div class="karo"></div>
-      <div class="karo k2"></div>
-      <div class="karo genis k3"></div>
-      <div class="karo"></div>
     </div>
   </div>
   </section>
